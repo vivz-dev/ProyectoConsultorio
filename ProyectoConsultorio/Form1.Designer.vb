@@ -26,17 +26,18 @@ Partial Class Form1
         Me.Boton = New System.Windows.Forms.Button()
         Me.Titulo = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.PACIENTESDataSet = New ProyectoConsultorio.PACIENTESDataSet()
-        Me.PersonasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PersonasTableAdapter = New ProyectoConsultorio.PACIENTESDataSetTableAdapters.PersonasTableAdapter()
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PersonasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PACIENTESDataSet = New ProyectoConsultorio.PACIENTESDataSet()
+        Me.PersonasTableAdapter = New ProyectoConsultorio.PACIENTESDataSetTableAdapters.PersonasTableAdapter()
         Me.Resultado = New System.Windows.Forms.Label()
+        Me.FIESTA = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PACIENTESDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PersonasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PACIENTESDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Boton
@@ -54,7 +55,7 @@ Partial Class Form1
         '
         Me.Titulo.AutoSize = True
         Me.Titulo.Font = New System.Drawing.Font("PanRoman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
-        Me.Titulo.Location = New System.Drawing.Point(113, 21)
+        Me.Titulo.Location = New System.Drawing.Point(141, 32)
         Me.Titulo.Name = "Titulo"
         Me.Titulo.Size = New System.Drawing.Size(275, 21)
         Me.Titulo.TabIndex = 2
@@ -66,24 +67,10 @@ Partial Class Form1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.ApellidoDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.PersonasBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(61, 73)
+        Me.DataGridView1.Location = New System.Drawing.Point(68, 91)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(445, 150)
         Me.DataGridView1.TabIndex = 3
-        '
-        'PACIENTESDataSet
-        '
-        Me.PACIENTESDataSet.DataSetName = "PACIENTESDataSet"
-        Me.PACIENTESDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PersonasBindingSource
-        '
-        Me.PersonasBindingSource.DataMember = "Personas"
-        Me.PersonasBindingSource.DataSource = Me.PACIENTESDataSet
-        '
-        'PersonasTableAdapter
-        '
-        Me.PersonasTableAdapter.ClearBeforeFill = True
         '
         'IdDataGridViewTextBoxColumn
         '
@@ -110,6 +97,20 @@ Partial Class Form1
         Me.DireccionDataGridViewTextBoxColumn.HeaderText = "Direccion"
         Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
         '
+        'PersonasBindingSource
+        '
+        Me.PersonasBindingSource.DataMember = "Personas"
+        Me.PersonasBindingSource.DataSource = Me.PACIENTESDataSet
+        '
+        'PACIENTESDataSet
+        '
+        Me.PACIENTESDataSet.DataSetName = "PACIENTESDataSet"
+        Me.PACIENTESDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PersonasTableAdapter
+        '
+        Me.PersonasTableAdapter.ClearBeforeFill = True
+        '
         'Resultado
         '
         Me.Resultado.AutoSize = True
@@ -119,11 +120,21 @@ Partial Class Form1
         Me.Resultado.TabIndex = 4
         Me.Resultado.Text = "Aqui va a aparecer el resultado"
         '
+        'FIESTA
+        '
+        Me.FIESTA.AutoSize = True
+        Me.FIESTA.Location = New System.Drawing.Point(241, 64)
+        Me.FIESTA.Name = "FIESTA"
+        Me.FIESTA.Size = New System.Drawing.Size(44, 13)
+        Me.FIESTA.TabIndex = 5
+        Me.FIESTA.Text = "FIESTA"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(561, 450)
+        Me.Controls.Add(Me.FIESTA)
         Me.Controls.Add(Me.Resultado)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Titulo)
@@ -131,8 +142,8 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.Text = "Form1"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PACIENTESDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PersonasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PACIENTESDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -148,4 +159,5 @@ Partial Class Form1
     Friend WithEvents ApellidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DireccionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents Resultado As Label
+    Friend WithEvents FIESTA As Label
 End Class

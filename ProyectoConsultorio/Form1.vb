@@ -24,4 +24,8 @@
         ' Cargar datos en el DataGridView
         Me.PersonasTableAdapter.Fill(Me.PACIENTESDataSet.Personas)
     End Sub
+
+    Private Sub FIESTA_Click(sender As Object, e As EventArgs) Handles FIESTA.Click
+
+    End Sub
 End Class
