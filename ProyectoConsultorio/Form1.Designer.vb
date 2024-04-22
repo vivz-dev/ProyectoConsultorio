@@ -117,7 +117,7 @@ Partial Class Form1
         Me.Resultado.Name = "Resultado"
         Me.Resultado.Size = New System.Drawing.Size(154, 13)
         Me.Resultado.TabIndex = 4
-        Me.Resultado.Text = "Aqui va a aparecer el resultado"
+        Me.Resultado.Text = "............"
         '
         'Form1
         '
