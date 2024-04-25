@@ -1,35 +1,48 @@
-﻿Public Class Form1
-    Private Sub Boton_Click(sender As Object, e As EventArgs) Handles Boton.Click
-        ' Buscar la fila correspondiente al ID 3
-        Dim fila As DataGridViewRow = DataGridView1.Rows _
-            .Cast(Of DataGridViewRow)() _
-            .FirstOrDefault(Function(r) Convert.ToInt32(r.Cells("IdDataGridViewTextBoxColumn").Value) = 3)
+﻿Imports System.IO
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
-        ' Verificar si se encontró la fila
-        If fila IsNot Nothing Then
-            ' Obtener los valores de las celdas de la fila
-            Dim nombre As String = fila.Cells("NombreDataGridViewTextBoxColumn").Value.ToString()
-            Dim apellido As String = fila.Cells("ApellidoDataGridViewTextBoxColumn").Value.ToString()
-            Dim direccion As String = fila.Cells("DireccionDataGridViewTextBoxColumn").Value.ToString()
-
-            ' Mostrar la información en el Label
-            Resultado.Text = $"Nombre: {nombre}, Apellido: {apellido}, Dirección: {direccion}"
-        Else
-            ' Si no se encontró la fila con el ID 3
-            Resultado.Text = "No se encontró información para el ID 3"
-        End If
-    End Sub
+Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Cargar datos en el DataGridView
-        Me.PersonasTableAdapter.Fill(Me.PACIENTESDataSet.Personas)
+
+        radiografias2()
     End Sub
 
-    Private Sub FIESTA_Click(sender As Object, e As EventArgs) Handles FIESTA.Click
+    Private Sub radiografias2()
+
+        radiografiasDataGridView.Columns.AddRange(New DataGridViewColumn(3) _
+                                    {New DataGridViewTextBoxColumn() With
+                                     {.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill, .HeaderText = "Nombre"},
+                                     New DataGridViewTextBoxColumn() With
+                                     {.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill, .HeaderText = "Fecha de creación"},
+                                     New DataGridViewButtonColumn() With
+                                     {.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill, .HeaderText = ""},
+                                     New DataGridViewButtonColumn() With
+                                     {.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill, .HeaderText = ""}})
+
+        Dim folderPath As String = "C:\Users\HP\source\repos\ProyectoConsultorio\Documentos\Radiografias"
+
+        If Directory.Exists(folderPath) Then
+            ' Borra cualquier elemento existente en el ListView
+            'radiografiasListView.Items.Clear()
+
+            ' Obtiene la lista de archivos en la carpeta
+            Dim files() As String = Directory.GetFiles(folderPath)
+
+            ' Itera a través de la lista de archivos y agrega sus nombres al ListView
+            For Each filePath As String In files
+                ' Agrega solo el nombre del archivo al ListView, no la ruta completa
+                Dim fileName As String = Path.GetFileName(filePath)
+                Dim creationDate As String = File.GetCreationTime(filePath).ToString()
+
+                ' Agrega el nombre del archivo y los botones "Ver" y "Eliminar" al ListView
+                radiografiasDataGridView.Rows.Add({fileName, creationDate, "Ver", "Eliminar"})
+
+            Next
+        Else
+            MessageBox.Show("La carpeta especificada no existe.")
+        End If
 
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
-    End Sub
 End Class
