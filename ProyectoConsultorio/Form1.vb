@@ -29,7 +29,7 @@ Public Class Form1
                                      New DataGridViewTextBoxColumn() With {.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill, .HeaderText = "Fecha de creación", .Name = "Fecha"},
                                      btnVer, btnEliminar})
 
-        Dim folderPath As String = "C:\Users\HP\source\repos\ProyectoConsultorio\Documentos\Radiografias"
+        Dim folderPath As String = "\Documentos\Radiografias"
 
         If Directory.Exists(folderPath) Then
             Dim files() As String = Directory.GetFiles(folderPath)
