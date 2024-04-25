@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,82 +20,30 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Boton = New System.Windows.Forms.Button()
-        Me.Titulo = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.PersonasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PACIENTESDataSet = New ProyectoConsultorio.PACIENTESDataSet()
         Me.PersonasTableAdapter = New ProyectoConsultorio.PACIENTESDataSetTableAdapters.PersonasTableAdapter()
-        Me.Resultado = New System.Windows.Forms.Label()
-        Me.FIESTA = New System.Windows.Forms.Label()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.radiografiasDataGridView = New System.Windows.Forms.DataGridView()
+        Me.agregarRadiografia = New System.Windows.Forms.Button()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.tomografiasDataGridView = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PersonasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PACIENTESDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        CType(Me.radiografiasDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
+        CType(Me.tomografiasDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Boton
-        '
-        Me.Boton.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Boton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Boton.Location = New System.Drawing.Point(218, 316)
-        Me.Boton.Name = "Boton"
-        Me.Boton.Size = New System.Drawing.Size(148, 35)
-        Me.Boton.TabIndex = 1
-        Me.Boton.Text = "Insertar"
-        Me.Boton.UseVisualStyleBackColor = False
-        '
-        'Titulo
-        '
-        Me.Titulo.AutoSize = True
-        Me.Titulo.Font = New System.Drawing.Font("PanRoman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
-        Me.Titulo.Location = New System.Drawing.Point(141, 32)
-        Me.Titulo.Name = "Titulo"
-        Me.Titulo.Size = New System.Drawing.Size(275, 21)
-        Me.Titulo.TabIndex = 2
-        Me.Titulo.Text = "APLICACION CONSULTORIO"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.ApellidoDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.PersonasBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(68, 91)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(445, 150)
-        Me.DataGridView1.TabIndex = 3
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "Id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "Id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        '
-        'ApellidoDataGridViewTextBoxColumn
-        '
-        Me.ApellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido"
-        Me.ApellidoDataGridViewTextBoxColumn.HeaderText = "Apellido"
-        Me.ApellidoDataGridViewTextBoxColumn.Name = "ApellidoDataGridViewTextBoxColumn"
-        '
-        'DireccionDataGridViewTextBoxColumn
-        '
-        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion"
-        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "Direccion"
-        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
         '
         'PersonasBindingSource
         '
@@ -111,19 +59,114 @@ Partial Class Form1
         '
         Me.PersonasTableAdapter.ClearBeforeFill = True
         '
-        'Resultado
+        'TabControl1
+        '
+        Me.TabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Controls.Add(Me.TabPage4)
+        Me.TabControl1.Location = New System.Drawing.Point(360, 90)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(701, 389)
+        Me.TabControl1.TabIndex = 4
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.radiografiasDataGridView)
+        Me.TabPage1.Controls.Add(Me.agregarRadiografia)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(50, 75, 50, 25)
+        Me.TabPage1.Size = New System.Drawing.Size(693, 360)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "Radiografías"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'radiografiasDataGridView
+        '
+        Me.radiografiasDataGridView.AllowUserToAddRows = False
+        Me.radiografiasDataGridView.AllowUserToDeleteRows = False
+        Me.radiografiasDataGridView.AllowUserToResizeRows = False
+        Me.radiografiasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.radiografiasDataGridView.Cursor = System.Windows.Forms.Cursors.Default
+        Me.radiografiasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.radiografiasDataGridView.Location = New System.Drawing.Point(50, 75)
+        Me.radiografiasDataGridView.MultiSelect = False
+        Me.radiografiasDataGridView.Name = "radiografiasDataGridView"
+        Me.radiografiasDataGridView.ReadOnly = True
+        Me.radiografiasDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.radiografiasDataGridView.RowTemplate.DividerHeight = 1
+        Me.radiografiasDataGridView.Size = New System.Drawing.Size(593, 260)
+        Me.radiografiasDataGridView.TabIndex = 4
+        '
+        'agregarRadiografia
+        '
+        Me.agregarRadiografia.BackColor = System.Drawing.SystemColors.Desktop
+        Me.agregarRadiografia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.agregarRadiografia.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.agregarRadiografia.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue
+        Me.agregarRadiografia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.agregarRadiografia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.agregarRadiografia.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.agregarRadiografia.Image = CType(resources.GetObject("agregarRadiografia.Image"), System.Drawing.Image)
+        Me.agregarRadiografia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.agregarRadiografia.Location = New System.Drawing.Point(477, 29)
+        Me.agregarRadiografia.Name = "agregarRadiografia"
+        Me.agregarRadiografia.Padding = New System.Windows.Forms.Padding(5)
+        Me.agregarRadiografia.Size = New System.Drawing.Size(166, 40)
+        Me.agregarRadiografia.TabIndex = 3
+        Me.agregarRadiografia.Text = "Agregar Radiografía"
+        Me.agregarRadiografia.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.agregarRadiografia.UseVisualStyleBackColor = False
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.tomografiasDataGridView)
+        Me.TabPage2.Controls.Add(Me.Button1)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(50, 75, 50, 25)
+        Me.TabPage2.Size = New System.Drawing.Size(693, 360)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Tomografías"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(50, 75, 50, 25)
+        Me.TabPage3.Size = New System.Drawing.Size(693, 360)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Resonancias"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'TabPage4
+        '
+        Me.TabPage4.BackColor = System.Drawing.Color.Transparent
+        Me.TabPage4.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.TabPage4.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(50, 75, 50, 25)
+        Me.TabPage4.Size = New System.Drawing.Size(693, 360)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "Otros"
+        '
+        'tomografiasDataGridView
         '
         Me.Resultado.AutoSize = True
         Me.Resultado.Location = New System.Drawing.Point(215, 275)
         Me.Resultado.Name = "Resultado"
-        Me.Resultado.Size = New System.Drawing.Size(43, 13)
+        Me.Resultado.Size = New System.Drawing.Size(154, 13)
         Me.Resultado.TabIndex = 4
         Me.Resultado.Text = "............"
         '
-        'FIESTA
+        'Button1
         '
         Me.FIESTA.AutoSize = True
-        Me.FIESTA.Location = New System.Drawing.Point(267, 65)
+        Me.FIESTA.Location = New System.Drawing.Point(241, 64)
         Me.FIESTA.Name = "FIESTA"
         Me.FIESTA.Size = New System.Drawing.Size(44, 13)
         Me.FIESTA.TabIndex = 5
@@ -133,31 +176,30 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(561, 450)
-        Me.Controls.Add(Me.FIESTA)
-        Me.Controls.Add(Me.Resultado)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Titulo)
-        Me.Controls.Add(Me.Boton)
+        Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.TabControl1)
         Me.Name = "Form1"
         Me.Text = "Form1"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PersonasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PACIENTESDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        CType(Me.radiografiasDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        CType(Me.tomografiasDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Boton As Button
-    Friend WithEvents Titulo As Label
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents PACIENTESDataSet As PACIENTESDataSet
     Friend WithEvents PersonasBindingSource As BindingSource
     Friend WithEvents PersonasTableAdapter As PACIENTESDataSetTableAdapters.PersonasTableAdapter
-    Friend WithEvents IdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ApellidoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DireccionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Resultado As Label
-    Friend WithEvents FIESTA As Label
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents agregarRadiografia As Button
+    Friend WithEvents radiografiasDataGridView As DataGridView
+    Friend WithEvents tomografiasDataGridView As DataGridView
+    Friend WithEvents Button1 As Button
 End Class
