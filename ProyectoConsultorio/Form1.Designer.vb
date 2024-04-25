@@ -32,10 +32,10 @@ Partial Class Form1
         Me.radiografiasDataGridView = New System.Windows.Forms.DataGridView()
         Me.agregarRadiografia = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.tomografiasDataGridView = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
         CType(Me.PersonasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PACIENTESDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -133,6 +133,20 @@ Partial Class Form1
         Me.TabPage2.Text = "Tomografías"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'tomografiasDataGridView
+        '
+        Me.tomografiasDataGridView.Location = New System.Drawing.Point(0, 0)
+        Me.tomografiasDataGridView.Name = "tomografiasDataGridView"
+        Me.tomografiasDataGridView.Size = New System.Drawing.Size(240, 150)
+        Me.tomografiasDataGridView.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(0, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 1
+        '
         'TabPage3
         '
         Me.TabPage3.Location = New System.Drawing.Point(4, 25)
@@ -153,24 +167,6 @@ Partial Class Form1
         Me.TabPage4.Size = New System.Drawing.Size(693, 360)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Otros"
-        '
-        'tomografiasDataGridView
-        '
-        Me.Resultado.AutoSize = True
-        Me.Resultado.Location = New System.Drawing.Point(215, 275)
-        Me.Resultado.Name = "Resultado"
-        Me.Resultado.Size = New System.Drawing.Size(154, 13)
-        Me.Resultado.TabIndex = 4
-        Me.Resultado.Text = "............"
-        '
-        'Button1
-        '
-        Me.FIESTA.AutoSize = True
-        Me.FIESTA.Location = New System.Drawing.Point(241, 64)
-        Me.FIESTA.Name = "FIESTA"
-        Me.FIESTA.Size = New System.Drawing.Size(44, 13)
-        Me.FIESTA.TabIndex = 5
-        Me.FIESTA.Text = "FIESTA"
         '
         'Form1
         '
