@@ -116,14 +116,14 @@ Partial Class Form1
         Me.Resultado.AutoSize = True
         Me.Resultado.Location = New System.Drawing.Point(215, 275)
         Me.Resultado.Name = "Resultado"
-        Me.Resultado.Size = New System.Drawing.Size(154, 13)
+        Me.Resultado.Size = New System.Drawing.Size(43, 13)
         Me.Resultado.TabIndex = 4
         Me.Resultado.Text = "............"
         '
         'FIESTA
         '
         Me.FIESTA.AutoSize = True
-        Me.FIESTA.Location = New System.Drawing.Point(241, 64)
+        Me.FIESTA.Location = New System.Drawing.Point(267, 65)
         Me.FIESTA.Name = "FIESTA"
         Me.FIESTA.Size = New System.Drawing.Size(44, 13)
         Me.FIESTA.TabIndex = 5
