@@ -54,10 +54,10 @@ Partial Class Form1
         'Titulo
         '
         Me.Titulo.AutoSize = True
-        Me.Titulo.Font = New System.Drawing.Font("PanRoman", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
+        Me.Titulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
         Me.Titulo.Location = New System.Drawing.Point(141, 32)
         Me.Titulo.Name = "Titulo"
-        Me.Titulo.Size = New System.Drawing.Size(275, 21)
+        Me.Titulo.Size = New System.Drawing.Size(378, 23)
         Me.Titulo.TabIndex = 2
         Me.Titulo.Text = "APLICACION CONSULTORIO"
         '
@@ -116,7 +116,7 @@ Partial Class Form1
         Me.Resultado.AutoSize = True
         Me.Resultado.Location = New System.Drawing.Point(215, 275)
         Me.Resultado.Name = "Resultado"
-        Me.Resultado.Size = New System.Drawing.Size(154, 13)
+        Me.Resultado.Size = New System.Drawing.Size(43, 13)
         Me.Resultado.TabIndex = 4
         Me.Resultado.Text = "............"
         '
