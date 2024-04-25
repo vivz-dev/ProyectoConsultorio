@@ -24,28 +24,31 @@ Partial Class Form2
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
-        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"", """a"": ""item"""}, -1)
-        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"", """a"": ""item"""}, -1)
-        Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"", """a"": ""item"""}, -1)
-        Dim ListViewItem4 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"", """a"": ""item"""}, -1)
+        Dim ListViewItem9 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"", """a"": ""item"""}, -1)
+        Dim ListViewItem10 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"", """a"": ""item"""}, -1)
+        Dim ListViewItem11 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"", """a"": ""item"""}, -1)
+        Dim ListViewItem12 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"", """a"": ""item"""}, -1)
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.agregarRadiografia = New System.Windows.Forms.Button()
         Me.radiografiasList = New System.Windows.Forms.ListView()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.agregarTomografia = New System.Windows.Forms.Button()
+        Me.tomografiasList = New System.Windows.Forms.ListView()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.agregarResonancia = New System.Windows.Forms.Button()
+        Me.resonanciasList = New System.Windows.Forms.ListView()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.agregarOtro = New System.Windows.Forms.Button()
+        Me.otrosList = New System.Windows.Forms.ListView()
         Me.PACIENTESDataSet = New ProyectoConsultorio.PACIENTESDataSet()
         Me.PersonasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PersonasTableAdapter = New ProyectoConsultorio.PACIENTESDataSetTableAdapters.PersonasTableAdapter()
-        Me.agregarTomografia = New System.Windows.Forms.Button()
-        Me.tomografiasList = New System.Windows.Forms.ListView()
-        Me.agregarResonancia = New System.Windows.Forms.Button()
-        Me.resonanciasList = New System.Windows.Forms.ListView()
-        Me.agregarOtro = New System.Windows.Forms.Button()
-        Me.otrosList = New System.Windows.Forms.ListView()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -78,6 +81,9 @@ Partial Class Form2
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label4)
+        Me.TabPage1.Controls.Add(Me.Label3)
+        Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Me.agregarRadiografia)
         Me.TabPage1.Controls.Add(Me.radiografiasList)
@@ -89,20 +95,30 @@ Partial Class Form2
         Me.TabPage1.Text = "Radiografías"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(171, 52)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(44, 13)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Nombre"
+        '
         'agregarRadiografia
         '
-        Me.agregarRadiografia.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.agregarRadiografia.BackColor = System.Drawing.SystemColors.Desktop
         Me.agregarRadiografia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.agregarRadiografia.Cursor = System.Windows.Forms.Cursors.Hand
         Me.agregarRadiografia.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue
         Me.agregarRadiografia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.agregarRadiografia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.agregarRadiografia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.agregarRadiografia.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.agregarRadiografia.Image = CType(resources.GetObject("agregarRadiografia.Image"), System.Drawing.Image)
         Me.agregarRadiografia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.agregarRadiografia.Location = New System.Drawing.Point(509, 22)
+        Me.agregarRadiografia.Location = New System.Drawing.Point(494, 22)
         Me.agregarRadiografia.Name = "agregarRadiografia"
         Me.agregarRadiografia.Padding = New System.Windows.Forms.Padding(5)
-        Me.agregarRadiografia.Size = New System.Drawing.Size(151, 40)
+        Me.agregarRadiografia.Size = New System.Drawing.Size(166, 40)
         Me.agregarRadiografia.TabIndex = 3
         Me.agregarRadiografia.Text = "Agregar Radiografía"
         Me.agregarRadiografia.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -117,7 +133,7 @@ Partial Class Form2
         Me.radiografiasList.FullRowSelect = True
         Me.radiografiasList.GridLines = True
         Me.radiografiasList.HideSelection = False
-        Me.radiografiasList.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1})
+        Me.radiografiasList.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem9})
         Me.radiografiasList.Location = New System.Drawing.Point(50, 75)
         Me.radiografiasList.Margin = New System.Windows.Forms.Padding(10)
         Me.radiografiasList.Name = "radiografiasList"
@@ -136,45 +152,6 @@ Partial Class Form2
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Tomografías"
         Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'TabPage3
-        '
-        Me.TabPage3.Controls.Add(Me.agregarResonancia)
-        Me.TabPage3.Controls.Add(Me.resonanciasList)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(50, 75, 50, 25)
-        Me.TabPage3.Size = New System.Drawing.Size(710, 360)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Resonancias"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'TabPage4
-        '
-        Me.TabPage4.BackColor = System.Drawing.Color.Transparent
-        Me.TabPage4.Controls.Add(Me.agregarOtro)
-        Me.TabPage4.Controls.Add(Me.otrosList)
-        Me.TabPage4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.TabPage4.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(50, 75, 50, 25)
-        Me.TabPage4.Size = New System.Drawing.Size(710, 360)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "Otros"
-        '
-        'PACIENTESDataSet
-        '
-        Me.PACIENTESDataSet.DataSetName = "PACIENTESDataSet"
-        Me.PACIENTESDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PersonasBindingSource
-        '
-        Me.PersonasBindingSource.DataMember = "Personas"
-        Me.PersonasBindingSource.DataSource = Me.PACIENTESDataSet
-        '
-        'PersonasTableAdapter
-        '
-        Me.PersonasTableAdapter.ClearBeforeFill = True
         '
         'agregarTomografia
         '
@@ -202,13 +179,25 @@ Partial Class Form2
         Me.tomografiasList.FullRowSelect = True
         Me.tomografiasList.GridLines = True
         Me.tomografiasList.HideSelection = False
-        Me.tomografiasList.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem2})
+        Me.tomografiasList.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem10})
         Me.tomografiasList.Location = New System.Drawing.Point(50, 75)
         Me.tomografiasList.Margin = New System.Windows.Forms.Padding(10)
         Me.tomografiasList.Name = "tomografiasList"
         Me.tomografiasList.Size = New System.Drawing.Size(610, 260)
         Me.tomografiasList.TabIndex = 4
         Me.tomografiasList.UseCompatibleStateImageBehavior = False
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.agregarResonancia)
+        Me.TabPage3.Controls.Add(Me.resonanciasList)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(50, 75, 50, 25)
+        Me.TabPage3.Size = New System.Drawing.Size(710, 360)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Resonancias"
+        Me.TabPage3.UseVisualStyleBackColor = True
         '
         'agregarResonancia
         '
@@ -235,13 +224,26 @@ Partial Class Form2
         Me.resonanciasList.FullRowSelect = True
         Me.resonanciasList.GridLines = True
         Me.resonanciasList.HideSelection = False
-        Me.resonanciasList.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem3})
+        Me.resonanciasList.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem11})
         Me.resonanciasList.Location = New System.Drawing.Point(50, 75)
         Me.resonanciasList.Margin = New System.Windows.Forms.Padding(10)
         Me.resonanciasList.Name = "resonanciasList"
         Me.resonanciasList.Size = New System.Drawing.Size(610, 260)
         Me.resonanciasList.TabIndex = 6
         Me.resonanciasList.UseCompatibleStateImageBehavior = False
+        '
+        'TabPage4
+        '
+        Me.TabPage4.BackColor = System.Drawing.Color.Transparent
+        Me.TabPage4.Controls.Add(Me.agregarOtro)
+        Me.TabPage4.Controls.Add(Me.otrosList)
+        Me.TabPage4.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.TabPage4.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(50, 75, 50, 25)
+        Me.TabPage4.Size = New System.Drawing.Size(710, 360)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "Otros"
         '
         'agregarOtro
         '
@@ -268,7 +270,7 @@ Partial Class Form2
         Me.otrosList.FullRowSelect = True
         Me.otrosList.GridLines = True
         Me.otrosList.HideSelection = False
-        Me.otrosList.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem4})
+        Me.otrosList.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem12})
         Me.otrosList.Location = New System.Drawing.Point(50, 75)
         Me.otrosList.Margin = New System.Windows.Forms.Padding(10)
         Me.otrosList.Name = "otrosList"
@@ -276,14 +278,46 @@ Partial Class Form2
         Me.otrosList.TabIndex = 6
         Me.otrosList.UseCompatibleStateImageBehavior = False
         '
-        'Label1
+        'PACIENTESDataSet
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(313, 48)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Label1"
+        Me.PACIENTESDataSet.DataSetName = "PACIENTESDataSet"
+        Me.PACIENTESDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PersonasBindingSource
+        '
+        Me.PersonasBindingSource.DataMember = "Personas"
+        Me.PersonasBindingSource.DataSource = Me.PACIENTESDataSet
+        '
+        'PersonasTableAdapter
+        '
+        Me.PersonasTableAdapter.ClearBeforeFill = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(53, 52)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(97, 13)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Fecha de Creación"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(243, 52)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(81, 13)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Ver Documento"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(362, 52)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(43, 13)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "Eliminar"
         '
         'Form2
         '
@@ -324,4 +358,7 @@ Partial Class Form2
     Friend WithEvents agregarOtro As Button
     Friend WithEvents otrosList As ListView
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label4 As Label
 End Class
