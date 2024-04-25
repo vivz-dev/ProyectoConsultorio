@@ -29,19 +29,20 @@ Partial Class Form1
         Me.PersonasTableAdapter = New ProyectoConsultorio.PACIENTESDataSetTableAdapters.PersonasTableAdapter()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.radiografiasDataGridView = New System.Windows.Forms.DataGridView()
         Me.agregarRadiografia = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.tomografiasListView = New System.Windows.Forms.ListView()
-        Me.agregarTomografia = New System.Windows.Forms.Button()
-        Me.radiografiasDataGridView = New System.Windows.Forms.DataGridView()
+        Me.tomografiasDataGridView = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PersonasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PACIENTESDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
         CType(Me.radiografiasDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
+        CType(Me.tomografiasDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PersonasBindingSource
@@ -83,6 +84,23 @@ Partial Class Form1
         Me.TabPage1.Text = "Radiografías"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'radiografiasDataGridView
+        '
+        Me.radiografiasDataGridView.AllowUserToAddRows = False
+        Me.radiografiasDataGridView.AllowUserToDeleteRows = False
+        Me.radiografiasDataGridView.AllowUserToResizeRows = False
+        Me.radiografiasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.radiografiasDataGridView.Cursor = System.Windows.Forms.Cursors.Default
+        Me.radiografiasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.radiografiasDataGridView.Location = New System.Drawing.Point(50, 75)
+        Me.radiografiasDataGridView.MultiSelect = False
+        Me.radiografiasDataGridView.Name = "radiografiasDataGridView"
+        Me.radiografiasDataGridView.ReadOnly = True
+        Me.radiografiasDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.radiografiasDataGridView.RowTemplate.DividerHeight = 1
+        Me.radiografiasDataGridView.Size = New System.Drawing.Size(593, 260)
+        Me.radiografiasDataGridView.TabIndex = 4
+        '
         'agregarRadiografia
         '
         Me.agregarRadiografia.BackColor = System.Drawing.SystemColors.Desktop
@@ -105,8 +123,8 @@ Partial Class Form1
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.tomografiasListView)
-        Me.TabPage2.Controls.Add(Me.agregarTomografia)
+        Me.TabPage2.Controls.Add(Me.tomografiasDataGridView)
+        Me.TabPage2.Controls.Add(Me.Button1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(50, 75, 50, 25)
@@ -136,57 +154,42 @@ Partial Class Form1
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Otros"
         '
-        'tomografiasListView
+        'tomografiasDataGridView
         '
-        Me.tomografiasListView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tomografiasListView.FullRowSelect = True
-        Me.tomografiasListView.GridLines = True
-        Me.tomografiasListView.HideSelection = False
-        Me.tomografiasListView.Location = New System.Drawing.Point(50, 75)
-        Me.tomografiasListView.MultiSelect = False
-        Me.tomografiasListView.Name = "tomografiasListView"
-        Me.tomografiasListView.Size = New System.Drawing.Size(593, 260)
-        Me.tomografiasListView.TabIndex = 7
-        Me.tomografiasListView.UseCompatibleStateImageBehavior = False
-        Me.tomografiasListView.View = System.Windows.Forms.View.Details
+        Me.tomografiasDataGridView.AllowUserToAddRows = False
+        Me.tomografiasDataGridView.AllowUserToDeleteRows = False
+        Me.tomografiasDataGridView.AllowUserToResizeRows = False
+        Me.tomografiasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.tomografiasDataGridView.Cursor = System.Windows.Forms.Cursors.Default
+        Me.tomografiasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tomografiasDataGridView.Location = New System.Drawing.Point(50, 75)
+        Me.tomografiasDataGridView.MultiSelect = False
+        Me.tomografiasDataGridView.Name = "tomografiasDataGridView"
+        Me.tomografiasDataGridView.ReadOnly = True
+        Me.tomografiasDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.tomografiasDataGridView.RowTemplate.DividerHeight = 1
+        Me.tomografiasDataGridView.Size = New System.Drawing.Size(593, 260)
+        Me.tomografiasDataGridView.TabIndex = 6
         '
-        'agregarTomografia
+        'Button1
         '
-        Me.agregarTomografia.BackColor = System.Drawing.SystemColors.Desktop
-        Me.agregarTomografia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.agregarTomografia.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.agregarTomografia.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue
-        Me.agregarTomografia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.agregarTomografia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.agregarTomografia.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.agregarTomografia.Image = CType(resources.GetObject("agregarTomografia.Image"), System.Drawing.Image)
-        Me.agregarTomografia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.agregarTomografia.Location = New System.Drawing.Point(477, 27)
-        Me.agregarTomografia.Name = "agregarTomografia"
-        Me.agregarTomografia.Padding = New System.Windows.Forms.Padding(5)
-        Me.agregarTomografia.Size = New System.Drawing.Size(166, 40)
-        Me.agregarTomografia.TabIndex = 6
-        Me.agregarTomografia.Text = "Agregar Tomografía"
-        Me.agregarTomografia.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.agregarTomografia.UseVisualStyleBackColor = False
-        '
-        'radiografiasDataGridView
-        '
-        Me.radiografiasDataGridView.AllowUserToAddRows = False
-        Me.radiografiasDataGridView.AllowUserToDeleteRows = False
-        Me.radiografiasDataGridView.AllowUserToResizeColumns = False
-        Me.radiografiasDataGridView.AllowUserToResizeRows = False
-        Me.radiografiasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.radiografiasDataGridView.Cursor = System.Windows.Forms.Cursors.Default
-        Me.radiografiasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.radiografiasDataGridView.Location = New System.Drawing.Point(50, 75)
-        Me.radiografiasDataGridView.MultiSelect = False
-        Me.radiografiasDataGridView.Name = "radiografiasDataGridView"
-        Me.radiografiasDataGridView.ReadOnly = True
-        Me.radiografiasDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.radiografiasDataGridView.RowTemplate.DividerHeight = 1
-        Me.radiografiasDataGridView.Size = New System.Drawing.Size(593, 260)
-        Me.radiografiasDataGridView.TabIndex = 4
+        Me.Button1.BackColor = System.Drawing.SystemColors.Desktop
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.MidnightBlue
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(477, 27)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Padding = New System.Windows.Forms.Padding(5)
+        Me.Button1.Size = New System.Drawing.Size(166, 40)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Agregar Tomografía"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Form1
         '
@@ -200,8 +203,9 @@ Partial Class Form1
         CType(Me.PACIENTESDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
-        Me.TabPage2.ResumeLayout(False)
         CType(Me.radiografiasDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        CType(Me.tomografiasDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -214,7 +218,7 @@ Partial Class Form1
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents agregarRadiografia As Button
-    Friend WithEvents tomografiasListView As ListView
-    Friend WithEvents agregarTomografia As Button
     Friend WithEvents radiografiasDataGridView As DataGridView
+    Friend WithEvents tomografiasDataGridView As DataGridView
+    Friend WithEvents Button1 As Button
 End Class
