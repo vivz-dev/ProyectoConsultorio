@@ -157,4 +157,14 @@ Public Class Form1
     Private Sub buscar_Click(sender As Object, e As EventArgs) Handles buscar.Click
 
     End Sub
+
+    Private Sub agenda_Click(sender As Object, e As EventArgs) Handles agenda.Click
+        Dim menuPrincipalForm As New Menu_Principal()
+
+        ' Mostrar el formulario
+        menuPrincipalForm.Show()
+
+        ' Opcionalmente, puedes ocultar el formulario actual si lo deseas
+        Me.Hide()
+    End Sub
 End Class
