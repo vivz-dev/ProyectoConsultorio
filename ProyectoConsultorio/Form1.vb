@@ -153,4 +153,8 @@ Public Class Form1
     Private Sub agregarRadiografia_Click(sender As Object, e As EventArgs) Handles agregarRadiografia.Click
 
     End Sub
+
+    Private Sub buscar_Click(sender As Object, e As EventArgs) Handles buscar.Click
+
+    End Sub
 End Class
