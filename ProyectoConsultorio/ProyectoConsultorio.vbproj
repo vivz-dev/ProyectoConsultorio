@@ -73,17 +73,23 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="buscarPaciente.Designer.vb">
+      <DependentUpon>buscarPaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="buscarPaciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configuracion.Designer.vb">
+      <DependentUpon>configuracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="configuracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuPrincipal.Designer.vb">
-      <DependentUpon>MenuPrincipal.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MenuPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuPrincipal1.vb" />
@@ -102,6 +108,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="nuevoPaciente.Designer.vb">
+      <DependentUpon>nuevoPaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="nuevoPaciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pacientes.Designer.vb">
+      <DependentUpon>Pacientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pacientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="PACIENTESDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -112,14 +130,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuPrincipal.resx">
-      <DependentUpon>MenuPrincipal.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pacientes.resx">
+      <DependentUpon>Pacientes.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
