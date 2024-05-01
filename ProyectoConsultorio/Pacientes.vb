@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports Microsoft.VisualBasic.FileIO
 
 Public Class Pacientes
     Private Sub Pacientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -47,7 +48,9 @@ Public Class Pacientes
         'Boton Ver
         If e.ColumnIndex = radiografiasDataGridView.Columns("btnVer").Index AndAlso e.RowIndex >= 0 Then
             Dim fileName As String = radiografiasDataGridView.Rows(e.RowIndex).Cells("Nombre").Value.ToString()
-            Dim filePath As String = Path.Combine("C:\Users\HP\source\repos\ProyectoConsultorio\Documentos\Radiografias", fileName)
+            Dim parentPath As String = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(My.Application.Info.DirectoryPath)))
+            Dim folderPath As String = String.Concat(parentPath, "\Documentos\Radiografias")
+            Dim filePath As String = Path.Combine(folderPath, fileName)
 
             ' Abre el archivo en el navegador Internet Explorer
             Try
@@ -60,16 +63,20 @@ Public Class Pacientes
         'Boton Eliminar
         If e.ColumnIndex = radiografiasDataGridView.Columns("btnEliminar").Index AndAlso e.RowIndex >= 0 Then
             Dim fileName As String = radiografiasDataGridView.Rows(e.RowIndex).Cells("Nombre").Value.ToString()
-            Dim filePath As String = Path.Combine("C:\Users\HP\source\repos\ProyectoConsultorio\Documentos\Radiografias", fileName)
+            Dim parentPath As String = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(My.Application.Info.DirectoryPath)))
+            Dim folderPath As String = String.Concat(parentPath, "\Documentos\Radiografias")
+            Dim filePath As String = Path.Combine(folderPath, fileName)
             Dim result As DialogResult = MessageBox.Show("¿Estás seguro de que deseas eliminar este archivo?", "Eliminar archivo", MessageBoxButtons.YesNo)
 
             ' Si el usuario confirma la eliminación, eliminar el archivo
             If result = DialogResult.Yes Then
                 Try
-                    'Esta linea de codigo elimina el documento pero da error, por eso la comento
                     'System.IO.File.Delete(filePath)
+                    FileSystem.DeleteFile(filePath, UIOption.OnlyErrorDialogs, RecycleOption.SendToRecycleBin)
                     MessageBox.Show("El archivo se ha eliminado correctamente.", "Eliminado")
                     radiografiasDataGridView.Rows.RemoveAt(e.RowIndex)
+                    'File.Delete(filePath)
+
                 Catch ex As Exception
                     MessageBox.Show("Error al eliminar el archivo: " & ex.Message, "Error")
                 End Try
