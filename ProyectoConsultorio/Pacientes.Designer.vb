@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Pacientes
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Pacientes
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Pacientes))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
@@ -30,16 +30,9 @@ Partial Class Pacientes
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.configuracion = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.agenda = New System.Windows.Forms.Button()
-        Me.crear = New System.Windows.Forms.Button()
-        Me.buscar = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.radiografiasDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -49,7 +42,7 @@ Partial Class Pacientes
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Location = New System.Drawing.Point(445, 150)
+        Me.TabControl1.Location = New System.Drawing.Point(143, 121)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(701, 389)
@@ -135,107 +128,26 @@ Partial Class Pacientes
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Otros"
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Panel1.Controls.Add(Me.configuracion)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.agenda)
-        Me.Panel1.Controls.Add(Me.crear)
-        Me.Panel1.Controls.Add(Me.buscar)
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(190, 684)
-        Me.Panel1.TabIndex = 6
-        '
-        'configuracion
-        '
-        Me.configuracion.AllowDrop = True
-        Me.configuracion.BackColor = System.Drawing.SystemColors.Highlight
-        Me.configuracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.configuracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.configuracion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.configuracion.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.configuracion.Location = New System.Drawing.Point(1, 400)
-        Me.configuracion.Name = "configuracion"
-        Me.configuracion.Size = New System.Drawing.Size(189, 47)
-        Me.configuracion.TabIndex = 4
-        Me.configuracion.Text = "Configuracion"
-        Me.configuracion.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.AllowDrop = True
-        Me.Button2.BackColor = System.Drawing.SystemColors.Highlight
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Location = New System.Drawing.Point(1, 354)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(189, 47)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Pacientes"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'agenda
-        '
-        Me.agenda.AllowDrop = True
-        Me.agenda.BackColor = System.Drawing.SystemColors.Highlight
-        Me.agenda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.agenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.agenda.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.agenda.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.agenda.Location = New System.Drawing.Point(1, 308)
-        Me.agenda.Name = "agenda"
-        Me.agenda.Size = New System.Drawing.Size(189, 47)
-        Me.agenda.TabIndex = 2
-        Me.agenda.Text = "Agenda"
-        Me.agenda.UseVisualStyleBackColor = False
-        '
-        'crear
-        '
-        Me.crear.AllowDrop = True
-        Me.crear.BackColor = System.Drawing.SystemColors.Highlight
-        Me.crear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.crear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.crear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.crear.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.crear.Location = New System.Drawing.Point(1, 262)
-        Me.crear.Name = "crear"
-        Me.crear.Size = New System.Drawing.Size(189, 47)
-        Me.crear.TabIndex = 1
-        Me.crear.Text = "Nuevo paciente"
-        Me.crear.UseVisualStyleBackColor = False
-        '
-        'buscar
-        '
-        Me.buscar.AllowDrop = True
-        Me.buscar.BackColor = System.Drawing.SystemColors.Highlight
-        Me.buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.buscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.buscar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.buscar.Location = New System.Drawing.Point(1, 216)
-        Me.buscar.Name = "buscar"
-        Me.buscar.Size = New System.Drawing.Size(189, 47)
-        Me.buscar.TabIndex = 0
-        Me.buscar.Text = "Buscar paciente"
-        Me.buscar.UseVisualStyleBackColor = False
-        '
         'Pacientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1264, 681)
-        Me.Controls.Add(Me.Panel1)
+        Me.ClientSize = New System.Drawing.Size(1048, 591)
+        Me.ControlBox = False
         Me.Controls.Add(Me.TabControl1)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Pacientes"
+        Me.Opacity = 0R
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Pacientes"
+        Me.TopMost = True
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         CType(Me.radiografiasDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -247,10 +159,4 @@ Partial Class Pacientes
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents TabPage4 As TabPage
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents configuracion As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents agenda As Button
-    Friend WithEvents crear As Button
-    Friend WithEvents buscar As Button
 End Class

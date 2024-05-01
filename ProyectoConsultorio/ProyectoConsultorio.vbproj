@@ -79,10 +79,10 @@
     <Compile Include="buscarPaciente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="configuracion.Designer.vb">
-      <DependentUpon>configuracion.vb</DependentUpon>
+    <Compile Include="configuracionForm.Designer.vb">
+      <DependentUpon>configuracionForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="configuracion.vb">
+    <Compile Include="configuracionForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -127,6 +127,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="buscarPaciente.resx">
+      <DependentUpon>buscarPaciente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configuracionForm.resx">
+      <DependentUpon>configuracionForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +141,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nuevoPaciente.resx">
+      <DependentUpon>nuevoPaciente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pacientes.resx">
       <DependentUpon>Pacientes.vb</DependentUpon>

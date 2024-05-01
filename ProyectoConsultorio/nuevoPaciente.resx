@@ -117,17 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="agregarRadiografia.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAH
-        XwAAB18B6nbFFgAAAXhJREFUOE+1k6FOxEAQhg9CCCSEIBBIEngDDILkSDiBJAFJAp4HQCDqQCAQGBzi
-        xAWFJAHRx0CcOIFAnECcQFSUb3b/Xtru0iuCL5nkZuaf/7azbaeJbrc7nyTJOrGpWFXrbzC4led5n/gi
-        6gzTNL3iz9YkbwZxwlDmZxv5RHugsTiIHr02YERM/M8KGabHGq9C41KiAB5vhTWcKK0zobcjGw8DGzS+
-        fT/ENAztK42ROqMCTnejRhTTzDDM6e85M4N86MtxTDPLkENdOzMed061gjFhlzANGe7W60R5TU/OEOGy
-        CkZmF+AaLWD2SHPGa1FcVMHB0W+pnZXDdHZx9TryFz/leHaGBknsHZtiGgwadwgPzswgGfhaHNPMMqR/
-        6swMkkPVo0jTZDgOdk/xzfdCrI9hT2kAe79wJmX0tXx4SRW9+OULKDOQRQim2wjeva4VfWaWNB7HdqET
-        /fptwwjNuUbaYcZ2czK/J+74TSnp0VuQ7L/pdH4Aa+WYd3F76XQAAAAASUVORK5CYII=
-</value>
-  </data>
 </root>

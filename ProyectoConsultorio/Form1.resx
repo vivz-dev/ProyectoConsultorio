@@ -123,12 +123,28 @@
   <metadata name="PACIENTESDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="PACIENTESDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="PersonasTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>351, 17</value>
   </metadata>
+  <metadata name="ContextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 54</value>
+  </metadata>
+  <metadata name="ContextMenuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>174, 54</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="PictureBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAH
+        XwAAB18B6nbFFgAAAXxJREFUOE+1k6FLBEEUxlcRUTjEYDAK+h9cOVBQ0GAUNAraDNc1GLZpMBgsgsFw
+        4TCJSdBwf4LRcOGCwXCI4YJhw/p749th7t24ewY/+MHNe9/7bnZmNylTfXV98ug4XYAlZU5bfxODyy8f
+        eQs+ITd0bx46p/zZvNrLhTllKDMhMd7xbupYXJhuzVBBDwamJmSE7ur4sGicRAYcPF6NY9iL9WBAr64x
+        P2JgkcaXMXrEw9BGrKd0XFAhdnceMXnEUxGY019zYSIKXWsIEU9VIJs6c2E87oRp9kEuwaOBDVuH8Jju
+        XCDG2aCYyQW4xhhidieYfSqK00FRtn5B7SBEfHJxto7/MZi9d4EiFrF3zCMeAkrPEK5dmIhF2zSHEE9V
+        IP19FyZisR0zFainLLA/cvYUn43JI30Ct2I9gXNvupBQ+rW8WbOgL354ASFtjRgVoSsYXs1AGS1mZnQ8
+        LjkL3dGv3zb08BzqyHiSYLk5Db+CS36ncpb0ptT230qSb+5/W37A2r5+AAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>42</value>
   </metadata>

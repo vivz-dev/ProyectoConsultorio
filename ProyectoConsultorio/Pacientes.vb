@@ -3,6 +3,8 @@ Imports Microsoft.VisualBasic.FileIO
 
 Public Class Pacientes
     Private Sub Pacientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.ControlBox = False
+        Me.MdiParent = Form1
         cargarRadiografias()
     End Sub
     Private Sub cargarRadiografias()
@@ -84,29 +86,4 @@ Public Class Pacientes
         End If
     End Sub
 
-    'Funcion para los botones 'Ver' y 'Eliminar de Tomografia'
-
-    Private Sub agregarRadiografia_Click(sender As Object, e As EventArgs) Handles agregarRadiografia.Click
-
-    End Sub
-
-
-    Private Sub Agenda_Click(sender As Object, e As EventArgs) Handles agenda.Click
-        Using AgendaForm As New Form1()
-
-            ' Mostrar el formulario
-            AgendaForm.Show()
-        End Using
-
-        ' Opcionalmente, puedes ocultar el formulario actual si lo deseas
-        Me.Hide()
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
-    Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
-
-    End Sub
 End Class
