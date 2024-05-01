@@ -120,14 +120,15 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="agregarRadiografia.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAH
-        XgAAB14BODEn8gAAAXhJREFUOE+1k6FOxEAQhg9CCCSEIBBIEngDDILkSDiBJAFJAp4HQCDqQCAQGBzi
-        xAWFJAHRx0CcOIFAnECcQFSUb3b/Xtru0iuCL5nkZuaf/7azbaeJbrc7nyTJOrGpWFXrbzC4led5n/gi
-        6gzTNL3iz9YkbwZxwlDmZxv5RHugsTiIHr02YERM/M8KGabHGq9C41KiAB5vhTWcKK0zobcjGw8DGzS+
-        fT/ENAztK42ROqMCTnejRhTTzDDM6e85M4N86MtxTDPLkENdOzMed061gjFhlzANGe7W60R5TU/OEOGy
-        CkZmF+AaLWD2SHPGa1FcVMHB0W+pnZXDdHZx9TryFz/leHaGBknsHZtiGgwadwgPzswgGfhaHNPMMqR/
-        6swMkkPVo0jTZDgOdk/xzfdCrI9hT2kAe79wJmX0tXx4SRW9+OULKDOQRQim2wjeva4VfWaWNB7HdqET
-        /fptwwjNuUbaYcZ2czK/J+74TSnp0VuQ7L/pdH4Aa+WYd3F76XQAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAB2EAAAdhAZXDuLYAAAF4SURBVDhPtZOhTsRAEIYPQggkhCAQSBJ4AwyC5Eg4gSQB
+        SQKeB0Ag6kAgEBgc4sQFhSQB0cdAnDiBQJxAnEBUlG92/17a7tIrgi+Z5Gbmn/+2s22niW63O58kyTqx
+        qVhV628wuJXneZ/4IuoM0zS94s/WJG8GccJQ5mcb+UR7oLE4iB69NmBETPzPChmmxxqvQuNSogAeb4U1
+        nCitM6G3IxsPAxs0vn0/xDQM7SuNkTqjAk53o0YU08wwzOnvOTODfOjLcUwzy5BDXTszHndOtYIxYZcw
+        DRnu1utEeU1PzhDhsgpGZhfgGi1g9khzxmtRXFTBwdFvqZ2Vw3R2cfU68hc/5Xh2hgZJ7B2bYhoMGncI
+        D87MIBn4WhzTzDKkf+rMDJJD1aNI02Q4DnZP8c33QqyPYU9pAHu/cCZl9LV8eEkVvfjlCygzkEUIptsI
+        3r2uFX1mljQex3ahE/36bcMIzblG2mHGdnMyvyfu+E0p6dFbkOy/6XR+AGvlmHdxe+l0AAAAAElFTkSu
+        QmCC
 </value>
   </data>
 </root>

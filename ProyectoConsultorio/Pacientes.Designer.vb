@@ -28,8 +28,6 @@ Partial Class Pacientes
         Me.radiografiasDataGridView = New System.Windows.Forms.DataGridView()
         Me.agregarRadiografia = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.tomografiasDataGridView = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -41,8 +39,6 @@ Partial Class Pacientes
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.radiografiasDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage2.SuspendLayout()
-        CType(Me.tomografiasDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -110,8 +106,6 @@ Partial Class Pacientes
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.tomografiasDataGridView)
-        Me.TabPage2.Controls.Add(Me.Button1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(50, 75, 50, 25)
@@ -119,20 +113,6 @@ Partial Class Pacientes
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Tomografías"
         Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'tomografiasDataGridView
-        '
-        Me.tomografiasDataGridView.Location = New System.Drawing.Point(0, 0)
-        Me.tomografiasDataGridView.Name = "tomografiasDataGridView"
-        Me.tomografiasDataGridView.Size = New System.Drawing.Size(240, 150)
-        Me.tomografiasDataGridView.TabIndex = 0
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(0, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
         '
         'TabPage3
         '
@@ -174,7 +154,7 @@ Partial Class Pacientes
         Me.configuracion.BackColor = System.Drawing.SystemColors.Highlight
         Me.configuracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.configuracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.configuracion.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.configuracion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.configuracion.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.configuracion.Location = New System.Drawing.Point(1, 400)
         Me.configuracion.Name = "configuracion"
@@ -189,7 +169,7 @@ Partial Class Pacientes
         Me.Button2.BackColor = System.Drawing.SystemColors.Highlight
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button2.Location = New System.Drawing.Point(1, 354)
         Me.Button2.Name = "Button2"
@@ -204,7 +184,7 @@ Partial Class Pacientes
         Me.agenda.BackColor = System.Drawing.SystemColors.Highlight
         Me.agenda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.agenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.agenda.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.agenda.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.agenda.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.agenda.Location = New System.Drawing.Point(1, 308)
         Me.agenda.Name = "agenda"
@@ -219,7 +199,7 @@ Partial Class Pacientes
         Me.crear.BackColor = System.Drawing.SystemColors.Highlight
         Me.crear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.crear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.crear.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.crear.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.crear.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.crear.Location = New System.Drawing.Point(1, 262)
         Me.crear.Name = "crear"
@@ -234,7 +214,7 @@ Partial Class Pacientes
         Me.buscar.BackColor = System.Drawing.SystemColors.Highlight
         Me.buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.buscar.Font = New System.Drawing.Font("Roboto", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.buscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.buscar.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.buscar.Location = New System.Drawing.Point(1, 216)
         Me.buscar.Name = "buscar"
@@ -255,8 +235,6 @@ Partial Class Pacientes
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         CType(Me.radiografiasDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage2.ResumeLayout(False)
-        CType(Me.tomografiasDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -267,8 +245,6 @@ Partial Class Pacientes
     Friend WithEvents radiografiasDataGridView As DataGridView
     Friend WithEvents agregarRadiografia As Button
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents tomografiasDataGridView As DataGridView
-    Friend WithEvents Button1 As Button
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents Panel1 As Panel
