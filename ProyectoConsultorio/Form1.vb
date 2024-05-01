@@ -55,17 +55,17 @@ Public Class Form1
     End Sub
 
     Private Sub pacientesButton_Click(sender As Object, e As EventArgs) Handles pacientesButton.Click
-        buscarPaciente.Hide()
-        nuevoPaciente.Hide()
-        configuracionForm.Hide()
-        agenda.Hide()
         With Pacientes
             .TopLevel = False
             Panel3.Controls.Add(Pacientes)
             .BringToFront()
             .Show()
-
         End With
+        buscarPaciente.Hide()
+        nuevoPaciente.Hide()
+        configuracionForm.Hide()
+        agenda.Hide()
+
     End Sub
 
     Private Sub configuracion_Click(sender As Object, e As EventArgs) Handles configuracion.Click
