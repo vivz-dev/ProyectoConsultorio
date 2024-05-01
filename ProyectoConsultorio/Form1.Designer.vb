@@ -39,9 +39,10 @@ Partial Class Form1
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.configuracion = New System.Windows.Forms.Button()
         Me.pacientesButton = New System.Windows.Forms.Button()
-        Me.agenda = New System.Windows.Forms.Button()
+        Me.agendaBtn = New System.Windows.Forms.Button()
         Me.nuevo = New System.Windows.Forms.Button()
         Me.buscar = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         CType(Me.PersonasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PACIENTESDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip2.SuspendLayout()
@@ -134,7 +135,7 @@ Partial Class Form1
         '
         Me.GroupBox1.Controls.Add(Me.configuracion)
         Me.GroupBox1.Controls.Add(Me.pacientesButton)
-        Me.GroupBox1.Controls.Add(Me.agenda)
+        Me.GroupBox1.Controls.Add(Me.agendaBtn)
         Me.GroupBox1.Controls.Add(Me.nuevo)
         Me.GroupBox1.Controls.Add(Me.buscar)
         Me.GroupBox1.Location = New System.Drawing.Point(0, 150)
@@ -164,15 +165,15 @@ Partial Class Form1
         Me.pacientesButton.Text = "Pacientes"
         Me.pacientesButton.UseVisualStyleBackColor = True
         '
-        'agenda
+        'agendaBtn
         '
-        Me.agenda.Dock = System.Windows.Forms.DockStyle.Top
-        Me.agenda.Location = New System.Drawing.Point(3, 62)
-        Me.agenda.Name = "agenda"
-        Me.agenda.Size = New System.Drawing.Size(191, 23)
-        Me.agenda.TabIndex = 2
-        Me.agenda.Text = "Agenda"
-        Me.agenda.UseVisualStyleBackColor = True
+        Me.agendaBtn.Dock = System.Windows.Forms.DockStyle.Top
+        Me.agendaBtn.Location = New System.Drawing.Point(3, 62)
+        Me.agendaBtn.Name = "agendaBtn"
+        Me.agendaBtn.Size = New System.Drawing.Size(191, 23)
+        Me.agendaBtn.TabIndex = 2
+        Me.agendaBtn.Text = "Agenda"
+        Me.agendaBtn.UseVisualStyleBackColor = True
         '
         'nuevo
         '
@@ -194,15 +195,25 @@ Partial Class Form1
         Me.buscar.Text = "Buscar"
         Me.buscar.UseVisualStyleBackColor = True
         '
+        'Panel3
+        '
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel3.Location = New System.Drawing.Point(200, 16)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1064, 665)
+        Me.Panel3.TabIndex = 12
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 681)
+        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "CENATURE"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PersonasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PACIENTESDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip2.ResumeLayout(False)
@@ -226,8 +237,9 @@ Partial Class Form1
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents configuracion As Button
     Friend WithEvents pacientesButton As Button
-    Friend WithEvents agenda As Button
+    Friend WithEvents agendaBtn As Button
     Friend WithEvents nuevo As Button
     Friend WithEvents buscar As Button
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Panel3 As Panel
 End Class

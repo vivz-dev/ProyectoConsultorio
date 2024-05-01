@@ -92,6 +92,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="agenda.Designer.vb">
+      <DependentUpon>agenda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="agenda.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MenuPrincipal1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -127,6 +133,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="agenda.resx">
+      <DependentUpon>agenda.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="buscarPaciente.resx">
       <DependentUpon>buscarPaciente.vb</DependentUpon>
     </EmbeddedResource>
