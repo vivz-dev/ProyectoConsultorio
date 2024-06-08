@@ -1,89 +1,70 @@
 ﻿Imports System.IO
 Imports Microsoft.VisualBasic.FileIO
+Imports System.Data.SqlClient
+Imports System.Reflection
 
 Public Class Pacientes
+
+    Dim conexion As New SqlConnection
+    Dim comando As New SqlCommand
+
     Private Sub Pacientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Conecta con el servidor local
+        Dim nombrePC = Environ("computername")
+        Dim rutaConexion As String = "server=" & nombrePC & "\SQLEXPRESS;database=cenature; integrated security=true"
+        conexion = New SqlConnection(rutaConexion)
+        llenar_grid()
+
         Me.ControlBox = False
         Me.MdiParent = Form1
-        cargarRadiografias()
     End Sub
-    Private Sub cargarRadiografias()
+    Private Sub llenar_grid()
 
-        Dim btnVer As New DataGridViewButtonColumn
-        btnVer.HeaderText = ""
-        btnVer.Text = "Ver"
-        btnVer.Name = "btnVer"
-        btnVer.UseColumnTextForButtonValue = True
+        Dim btnVerMas As New DataGridViewButtonColumn
+        btnVerMas.HeaderText = ""
+        btnVerMas.Text = "Ver Más"
+        btnVerMas.Name = "btnVerMas"
+        btnVerMas.UseColumnTextForButtonValue = True
 
-        Dim btnEliminar As New DataGridViewButtonColumn
-        btnEliminar.HeaderText = ""
-        btnEliminar.Text = "Eliminar"
-        btnEliminar.Name = "btnEliminar"
-        btnEliminar.UseColumnTextForButtonValue = True
+        Dim consulta As String = "SELECT * FROM paciente"
+        Dim adaptador As New SqlDataAdapter(consulta, conexion)
+        Dim dt As New DataTable
+        adaptador.Fill(dt)
+        pacientesDataGridView.DataSource = dt
 
-
-        radiografiasDataGridView.Columns.AddRange(New DataGridViewColumn(3) _
-                                    {
-                                    New DataGridViewTextBoxColumn() With {.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill, .HeaderText = "Nombre", .Name = "Nombre"},
-                                     New DataGridViewTextBoxColumn() With {.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill, .HeaderText = "Fecha de creación", .Name = "Fecha"},
-                                     btnVer, btnEliminar})
-
-        Dim parentPath As String = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(My.Application.Info.DirectoryPath)))
-        Dim folderPath As String = String.Concat(parentPath, "\Documentos\Radiografias")
-
-        If Directory.Exists(folderPath) Then
-            'MessageBox.Show(String.Concat("Abriendo la carpeta... ", folderPath))
-            Dim files() As String = Directory.GetFiles(folderPath)
-            For Each filePath As String In files
-                Dim fileName As String = Path.GetFileName(filePath)
-                Dim creationDate As String = File.GetCreationTime(filePath).ToString()
-                radiografiasDataGridView.Rows.Add({fileName, creationDate})
-            Next
-        Else
-            MessageBox.Show("La carpeta especificada no existe.", folderPath)
-        End If
+        pacientesDataGridView.Columns.Add(btnVerMas)
+        AddHandler pacientesDataGridView.CellContentClick, AddressOf pacientesDataGridView_CellContentClick
 
     End Sub
+    Private Sub pacientesDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+        ' Verifica si el clic fue en una celda de la columna del botón
+        If e.ColumnIndex = pacientesDataGridView.Columns("btnVerMas").Index AndAlso e.RowIndex >= 0 Then
+            ' Obtén el ID del paciente u otra información relevante
+            Dim pacienteNombre As String = pacientesDataGridView.Rows(e.RowIndex).Cells("nombre").Value.ToString()
+            Dim pacienteApellido As String = pacientesDataGridView.Rows(e.RowIndex).Cells("apellido").Value.ToString()
+            Dim pacienteCedula As String = pacientesDataGridView.Rows(e.RowIndex).Cells("cedula").Value.ToString()
+            Dim pacienteFechaNacimiento As String = pacientesDataGridView.Rows(e.RowIndex).Cells("fechaNacimiento").Value.ToString()
+            Dim pacienteTelefono As String = pacientesDataGridView.Rows(e.RowIndex).Cells("telefono").Value.ToString()
+            Dim pacienteId As Integer = Convert.ToInt32(pacientesDataGridView.Rows(e.RowIndex).Cells("idPaciente").Value)
+            If pacienteId Then
+                ' Crea una nueva instancia del formulario de detalles
+                Dim detallesForm As New InformacionPaciente()
 
-    'Funcion para los botones 'Ver' y 'Eliminar de Radiografia'
-    Private Sub radiografiasDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles radiografiasDataGridView.CellContentClick
-        'Boton Ver
-        If e.ColumnIndex = radiografiasDataGridView.Columns("btnVer").Index AndAlso e.RowIndex >= 0 Then
-            Dim fileName As String = radiografiasDataGridView.Rows(e.RowIndex).Cells("Nombre").Value.ToString()
-            Dim parentPath As String = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(My.Application.Info.DirectoryPath)))
-            Dim folderPath As String = String.Concat(parentPath, "\Documentos\Radiografias")
-            Dim filePath As String = Path.Combine(folderPath, fileName)
+                ' Pasa los datos del paciente al nuevo formulario
+                InformacionPaciente.Nombre = pacienteNombre
+                detallesForm.Apellido = pacienteApellido
+                detallesForm.Cedula = pacienteCedula
+                detallesForm.FechaNacimiento = pacienteFechaNacimiento
+                detallesForm.Telefono = pacienteTelefono
 
-            ' Abre el archivo en el navegador Internet Explorer
-            Try
-                System.Diagnostics.Process.Start("IExplore.exe", filePath)
-            Catch ex As Exception
-                MessageBox.Show("Error al intentar abrir el archivo: " & ex.Message, "Error")
-            End Try
-        End If
-
-        'Boton Eliminar
-        If e.ColumnIndex = radiografiasDataGridView.Columns("btnEliminar").Index AndAlso e.RowIndex >= 0 Then
-            Dim fileName As String = radiografiasDataGridView.Rows(e.RowIndex).Cells("Nombre").Value.ToString()
-            Dim parentPath As String = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(My.Application.Info.DirectoryPath)))
-            Dim folderPath As String = String.Concat(parentPath, "\Documentos\Radiografias")
-            Dim filePath As String = Path.Combine(folderPath, fileName)
-            Dim result As DialogResult = MessageBox.Show("¿Estás seguro de que deseas eliminar este archivo?", "Eliminar archivo", MessageBoxButtons.YesNo)
-
-            ' Si el usuario confirma la eliminación, eliminar el archivo
-            If result = DialogResult.Yes Then
-                Try
-                    'System.IO.File.Delete(filePath)
-                    FileSystem.DeleteFile(filePath, UIOption.OnlyErrorDialogs, RecycleOption.SendToRecycleBin)
-                    MessageBox.Show("El archivo se ha eliminado correctamente.", "Eliminado")
-                    radiografiasDataGridView.Rows.RemoveAt(e.RowIndex)
-                    'File.Delete(filePath)
-
-                Catch ex As Exception
-                    MessageBox.Show("Error al eliminar el archivo: " & ex.Message, "Error")
-                End Try
+                ' Muestra el formulario de detalles
+                detallesForm.ShowDialog()
+            Else
+                MessageBox.Show("El paciente especificado no existe.")
             End If
         End If
     End Sub
+
+
 
 End Class

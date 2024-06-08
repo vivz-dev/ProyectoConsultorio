@@ -98,6 +98,12 @@
     <Compile Include="agenda.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="InformacionPaciente.Designer.vb">
+      <DependentUpon>InformacionPaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InformacionPaciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MenuPrincipal1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformacionPaciente.resx">
+      <DependentUpon>InformacionPaciente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

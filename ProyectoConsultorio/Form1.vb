@@ -1,9 +1,13 @@
 ﻿Imports System.IO
+Imports System.Reflection.Emit
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Label3.Text = Environ("computername")
+        Label4.Text = Environ("username")
+
         Me.IsMdiContainer = True
         With agenda
             .TopLevel = False
@@ -18,6 +22,7 @@ Public Class Form1
         nuevoPaciente.Hide()
         Pacientes.Hide()
         configuracionForm.Hide()
+        Panel3.Controls.Clear()
         With buscarPaciente
             .TopLevel = False
             Panel3.Controls.Add(buscarPaciente)
@@ -80,5 +85,9 @@ Public Class Form1
             .Show()
 
         End With
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class
