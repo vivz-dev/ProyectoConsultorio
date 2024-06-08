@@ -126,6 +126,7 @@
     <Compile Include="nuevoPaciente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Paciente.vb" />
     <Compile Include="Pacientes.Designer.vb">
       <DependentUpon>Pacientes.vb</DependentUpon>
     </Compile>
