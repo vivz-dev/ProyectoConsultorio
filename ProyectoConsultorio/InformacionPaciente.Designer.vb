@@ -75,15 +75,15 @@ Partial Class InformacionPaciente
         Me.radiografiasDataGridView = New System.Windows.Forms.DataGridView()
         Me.agregarRadiografia = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.TabPage10 = New System.Windows.Forms.TabPage()
-        Me.tomografiasDataGridView = New System.Windows.Forms.DataGridView()
-        Me.resonanciasDataGridView = New System.Windows.Forms.DataGridView()
-        Me.otrosDataGridView = New System.Windows.Forms.DataGridView()
         Me.agregarTomografia = New System.Windows.Forms.Button()
+        Me.tomografiasDataGridView = New System.Windows.Forms.DataGridView()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.agregarResonancia = New System.Windows.Forms.Button()
+        Me.resonanciasDataGridView = New System.Windows.Forms.DataGridView()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.agregarDocumento = New System.Windows.Forms.Button()
+        Me.otrosDataGridView = New System.Windows.Forms.DataGridView()
+        Me.TabPage10 = New System.Windows.Forms.TabPage()
         Me.TabControl2.SuspendLayout()
         Me.TabPage5.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -128,10 +128,10 @@ Partial Class InformacionPaciente
         Me.TabPage1.SuspendLayout()
         CType(Me.radiografiasDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
         CType(Me.tomografiasDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage3.SuspendLayout()
         CType(Me.resonanciasDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage4.SuspendLayout()
         CType(Me.otrosDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -795,91 +795,6 @@ Partial Class InformacionPaciente
         Me.TabPage2.Text = "Tomografías"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'TabPage3
-        '
-        Me.TabPage3.Controls.Add(Me.agregarResonancia)
-        Me.TabPage3.Controls.Add(Me.resonanciasDataGridView)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(50, 75, 50, 25)
-        Me.TabPage3.Size = New System.Drawing.Size(744, 352)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Resonancias"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'TabPage4
-        '
-        Me.TabPage4.BackColor = System.Drawing.Color.Transparent
-        Me.TabPage4.Controls.Add(Me.agregarDocumento)
-        Me.TabPage4.Controls.Add(Me.otrosDataGridView)
-        Me.TabPage4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.TabPage4.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(50, 75, 50, 25)
-        Me.TabPage4.Size = New System.Drawing.Size(744, 352)
-        Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "Otros"
-        '
-        'TabPage10
-        '
-        Me.TabPage10.Location = New System.Drawing.Point(4, 25)
-        Me.TabPage10.Name = "TabPage10"
-        Me.TabPage10.Size = New System.Drawing.Size(792, 421)
-        Me.TabPage10.TabIndex = 5
-        Me.TabPage10.Text = "Consultas"
-        Me.TabPage10.UseVisualStyleBackColor = True
-        '
-        'tomografiasDataGridView
-        '
-        Me.tomografiasDataGridView.AllowUserToAddRows = False
-        Me.tomografiasDataGridView.AllowUserToDeleteRows = False
-        Me.tomografiasDataGridView.AllowUserToResizeRows = False
-        Me.tomografiasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.tomografiasDataGridView.Cursor = System.Windows.Forms.Cursors.Default
-        Me.tomografiasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tomografiasDataGridView.Location = New System.Drawing.Point(50, 75)
-        Me.tomografiasDataGridView.MultiSelect = False
-        Me.tomografiasDataGridView.Name = "tomografiasDataGridView"
-        Me.tomografiasDataGridView.ReadOnly = True
-        Me.tomografiasDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.tomografiasDataGridView.RowTemplate.DividerHeight = 1
-        Me.tomografiasDataGridView.Size = New System.Drawing.Size(644, 252)
-        Me.tomografiasDataGridView.TabIndex = 5
-        '
-        'resonanciasDataGridView
-        '
-        Me.resonanciasDataGridView.AllowUserToAddRows = False
-        Me.resonanciasDataGridView.AllowUserToDeleteRows = False
-        Me.resonanciasDataGridView.AllowUserToResizeRows = False
-        Me.resonanciasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.resonanciasDataGridView.Cursor = System.Windows.Forms.Cursors.Default
-        Me.resonanciasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.resonanciasDataGridView.Location = New System.Drawing.Point(50, 75)
-        Me.resonanciasDataGridView.MultiSelect = False
-        Me.resonanciasDataGridView.Name = "resonanciasDataGridView"
-        Me.resonanciasDataGridView.ReadOnly = True
-        Me.resonanciasDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.resonanciasDataGridView.RowTemplate.DividerHeight = 1
-        Me.resonanciasDataGridView.Size = New System.Drawing.Size(644, 252)
-        Me.resonanciasDataGridView.TabIndex = 5
-        '
-        'otrosDataGridView
-        '
-        Me.otrosDataGridView.AllowUserToAddRows = False
-        Me.otrosDataGridView.AllowUserToDeleteRows = False
-        Me.otrosDataGridView.AllowUserToResizeRows = False
-        Me.otrosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.otrosDataGridView.Cursor = System.Windows.Forms.Cursors.Default
-        Me.otrosDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.otrosDataGridView.Location = New System.Drawing.Point(50, 75)
-        Me.otrosDataGridView.MultiSelect = False
-        Me.otrosDataGridView.Name = "otrosDataGridView"
-        Me.otrosDataGridView.ReadOnly = True
-        Me.otrosDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
-        Me.otrosDataGridView.RowTemplate.DividerHeight = 1
-        Me.otrosDataGridView.Size = New System.Drawing.Size(644, 252)
-        Me.otrosDataGridView.TabIndex = 5
-        '
         'agregarTomografia
         '
         Me.agregarTomografia.BackColor = System.Drawing.SystemColors.Desktop
@@ -899,6 +814,35 @@ Partial Class InformacionPaciente
         Me.agregarTomografia.Text = "Agregar Tomografía"
         Me.agregarTomografia.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.agregarTomografia.UseVisualStyleBackColor = False
+        '
+        'tomografiasDataGridView
+        '
+        Me.tomografiasDataGridView.AllowUserToAddRows = False
+        Me.tomografiasDataGridView.AllowUserToDeleteRows = False
+        Me.tomografiasDataGridView.AllowUserToResizeRows = False
+        Me.tomografiasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.tomografiasDataGridView.Cursor = System.Windows.Forms.Cursors.Default
+        Me.tomografiasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tomografiasDataGridView.Location = New System.Drawing.Point(50, 75)
+        Me.tomografiasDataGridView.MultiSelect = False
+        Me.tomografiasDataGridView.Name = "tomografiasDataGridView"
+        Me.tomografiasDataGridView.ReadOnly = True
+        Me.tomografiasDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.tomografiasDataGridView.RowTemplate.DividerHeight = 1
+        Me.tomografiasDataGridView.Size = New System.Drawing.Size(644, 252)
+        Me.tomografiasDataGridView.TabIndex = 5
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.agregarResonancia)
+        Me.TabPage3.Controls.Add(Me.resonanciasDataGridView)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(50, 75, 50, 25)
+        Me.TabPage3.Size = New System.Drawing.Size(744, 352)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Resonancias"
+        Me.TabPage3.UseVisualStyleBackColor = True
         '
         'agregarResonancia
         '
@@ -920,6 +864,36 @@ Partial Class InformacionPaciente
         Me.agregarResonancia.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.agregarResonancia.UseVisualStyleBackColor = False
         '
+        'resonanciasDataGridView
+        '
+        Me.resonanciasDataGridView.AllowUserToAddRows = False
+        Me.resonanciasDataGridView.AllowUserToDeleteRows = False
+        Me.resonanciasDataGridView.AllowUserToResizeRows = False
+        Me.resonanciasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.resonanciasDataGridView.Cursor = System.Windows.Forms.Cursors.Default
+        Me.resonanciasDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.resonanciasDataGridView.Location = New System.Drawing.Point(50, 75)
+        Me.resonanciasDataGridView.MultiSelect = False
+        Me.resonanciasDataGridView.Name = "resonanciasDataGridView"
+        Me.resonanciasDataGridView.ReadOnly = True
+        Me.resonanciasDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.resonanciasDataGridView.RowTemplate.DividerHeight = 1
+        Me.resonanciasDataGridView.Size = New System.Drawing.Size(644, 252)
+        Me.resonanciasDataGridView.TabIndex = 5
+        '
+        'TabPage4
+        '
+        Me.TabPage4.BackColor = System.Drawing.Color.Transparent
+        Me.TabPage4.Controls.Add(Me.agregarDocumento)
+        Me.TabPage4.Controls.Add(Me.otrosDataGridView)
+        Me.TabPage4.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.TabPage4.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(50, 75, 50, 25)
+        Me.TabPage4.Size = New System.Drawing.Size(744, 352)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "Otros"
+        '
         'agregarDocumento
         '
         Me.agregarDocumento.BackColor = System.Drawing.SystemColors.Desktop
@@ -939,6 +913,32 @@ Partial Class InformacionPaciente
         Me.agregarDocumento.Text = "Agregar Documento"
         Me.agregarDocumento.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.agregarDocumento.UseVisualStyleBackColor = False
+        '
+        'otrosDataGridView
+        '
+        Me.otrosDataGridView.AllowUserToAddRows = False
+        Me.otrosDataGridView.AllowUserToDeleteRows = False
+        Me.otrosDataGridView.AllowUserToResizeRows = False
+        Me.otrosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.otrosDataGridView.Cursor = System.Windows.Forms.Cursors.Default
+        Me.otrosDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.otrosDataGridView.Location = New System.Drawing.Point(50, 75)
+        Me.otrosDataGridView.MultiSelect = False
+        Me.otrosDataGridView.Name = "otrosDataGridView"
+        Me.otrosDataGridView.ReadOnly = True
+        Me.otrosDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.otrosDataGridView.RowTemplate.DividerHeight = 1
+        Me.otrosDataGridView.Size = New System.Drawing.Size(644, 252)
+        Me.otrosDataGridView.TabIndex = 5
+        '
+        'TabPage10
+        '
+        Me.TabPage10.Location = New System.Drawing.Point(4, 25)
+        Me.TabPage10.Name = "TabPage10"
+        Me.TabPage10.Size = New System.Drawing.Size(792, 421)
+        Me.TabPage10.TabIndex = 5
+        Me.TabPage10.Text = "Consultas"
+        Me.TabPage10.UseVisualStyleBackColor = True
         '
         'InformacionPaciente
         '
@@ -1004,10 +1004,10 @@ Partial Class InformacionPaciente
         Me.TabPage1.ResumeLayout(False)
         CType(Me.radiografiasDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
-        Me.TabPage3.ResumeLayout(False)
-        Me.TabPage4.ResumeLayout(False)
         CType(Me.tomografiasDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage3.ResumeLayout(False)
         CType(Me.resonanciasDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage4.ResumeLayout(False)
         CType(Me.otrosDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

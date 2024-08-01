@@ -190,6 +190,4 @@ Public Class InformacionPaciente
             End If
         End If
     End Sub
-
-
 End Class

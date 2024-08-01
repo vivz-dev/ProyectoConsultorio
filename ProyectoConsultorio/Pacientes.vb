@@ -2,65 +2,43 @@
 Imports Microsoft.VisualBasic.FileIO
 Imports System.Data.SqlClient
 Imports System.Reflection
+Imports System.Text
 
 Public Class Pacientes
 
-    Dim conexion As New SqlConnection
-    Dim comando As New SqlCommand
-
     Private Sub Pacientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            'Conecta con el servidor local
-            Dim nombrePC = Environ("computername")
-            Dim rutaConexion As String = "server=" & nombrePC & "\SQLEXPRESS;database=cenature; integrated security=true"
-            conexion = New SqlConnection(rutaConexion)
-            llenar_grid()
+            ReadCSV()
         Catch ex As Exception
-            MessageBox.Show("No se ha podido conectar con la base de datos.")
+            MessageBox.Show("No se ha podido leer la base de datos.")
         End Try
 
 
+        'No tocar
         Me.ControlBox = False
         Me.MdiParent = Form1
     End Sub
-    Private Sub llenar_grid()
 
-        Dim btnVerMas As New DataGridViewButtonColumn
-        btnVerMas.HeaderText = ""
-        btnVerMas.Text = "Ver Más"
-        btnVerMas.Name = "btnVerMas"
-        btnVerMas.UseColumnTextForButtonValue = True
-
-        Dim consulta As String = "SELECT * FROM paciente"
-        Dim adaptador As New SqlDataAdapter(consulta, conexion)
-        Dim dt As New DataTable
-        adaptador.Fill(dt)
-        pacientesDataGridView.DataSource = dt
-
-        pacientesDataGridView.Columns.Add(btnVerMas)
-        AddHandler pacientesDataGridView.CellContentClick, AddressOf pacientesDataGridView_CellContentClick
-
-    End Sub
-    Private Sub pacientesDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+    Private Sub pacientesDataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
         ' Verifica si el clic fue en una celda de la columna del botón
-        If e.ColumnIndex = pacientesDataGridView.Columns("btnVerMas").Index AndAlso e.RowIndex >= 0 Then
+        If e.ColumnIndex = pacientesDataGridView2.Columns("btnVerMas").Index AndAlso e.RowIndex >= 0 Then
             ' Obtén el ID del paciente u otra información relevante
-            Dim pacienteNombre As String = pacientesDataGridView.Rows(e.RowIndex).Cells("nombre").Value.ToString()
-            Dim pacienteApellido As String = pacientesDataGridView.Rows(e.RowIndex).Cells("apellido").Value.ToString()
-            Dim pacienteCedula As String = pacientesDataGridView.Rows(e.RowIndex).Cells("cedula").Value.ToString()
-            Dim pacienteFechaNacimiento As String = pacientesDataGridView.Rows(e.RowIndex).Cells("fechaNacimiento").Value.ToString()
-            Dim pacienteTelefono As String = pacientesDataGridView.Rows(e.RowIndex).Cells("telefono").Value.ToString()
-            Dim pacienteId As Integer = Convert.ToInt32(pacientesDataGridView.Rows(e.RowIndex).Cells("idPaciente").Value)
+            Dim pacienteNombre As String = pacientesDataGridView2.Rows(e.RowIndex).Cells("Nombre").Value.ToString()
+            Dim pacienteApellido As String = pacientesDataGridView2.Rows(e.RowIndex).Cells("Apellido").Value.ToString()
+            Dim pacienteCedula As String = pacientesDataGridView2.Rows(e.RowIndex).Cells("Cedula").Value.ToString()
+            Dim pacienteFechaNacimiento As String = pacientesDataGridView2.Rows(e.RowIndex).Cells("Fecha").Value.ToString()
+            Dim pacienteTelefono As String = pacientesDataGridView2.Rows(e.RowIndex).Cells("Telefono").Value.ToString()
+            Dim pacienteId As Integer = Convert.ToInt32(pacientesDataGridView2.Rows(e.RowIndex).Cells("idPaciente").Value)
             If pacienteId Then
                 Dim paciente As New Paciente()
-                paciente.Nombre = pacientesDataGridView.Rows(e.RowIndex).Cells("nombre").Value.ToString()
-                paciente.Apellido = pacientesDataGridView.Rows(e.RowIndex).Cells("apellido").Value.ToString()
-                paciente.Cedula = pacientesDataGridView.Rows(e.RowIndex).Cells("cedula").Value.ToString()
-                paciente.FechaNacimiento = Convert.ToDateTime(pacientesDataGridView.Rows(e.RowIndex).Cells("fechaNacimiento").Value)
-                paciente.Telefono = pacientesDataGridView.Rows(e.RowIndex).Cells("telefono").Value.ToString()
-                paciente.Sexo = pacientesDataGridView.Rows(e.RowIndex).Cells("sexo").Value.ToString()
-                paciente.estadoCivil = pacientesDataGridView.Rows(e.RowIndex).Cells("estadoCivil").Value.ToString()
-                paciente.Ocupacion = pacientesDataGridView.Rows(e.RowIndex).Cells("ocupacion").Value.ToString()
+                paciente.Nombre = pacientesDataGridView2.Rows(e.RowIndex).Cells("Nombre").Value.ToString()
+                paciente.Apellido = pacientesDataGridView2.Rows(e.RowIndex).Cells("Apellido").Value.ToString()
+                paciente.Cedula = pacientesDataGridView2.Rows(e.RowIndex).Cells("Cedula").Value.ToString()
+                paciente.FechaNacimiento = Convert.ToDateTime(pacientesDataGridView2.Rows(e.RowIndex).Cells("Fecha").Value)
+                paciente.Telefono = pacientesDataGridView2.Rows(e.RowIndex).Cells("Telefono").Value.ToString()
+                paciente.Sexo = pacientesDataGridView2.Rows(e.RowIndex).Cells("Sexo").Value.ToString()
+                paciente.estadoCivil = pacientesDataGridView2.Rows(e.RowIndex).Cells("EstadoCivil").Value.ToString()
+                paciente.Ocupacion = pacientesDataGridView2.Rows(e.RowIndex).Cells("Ocupacion").Value.ToString()
                 '
                 'paciente.patologicas
 
@@ -82,13 +60,75 @@ Public Class Pacientes
     '    Dim adaptador As New SqlDataAdapter(consulta, conexion)
     '    Dim dt As New DataTable
     '    adaptador.Fill(dt)
-    '    pacientesDataGridView.DataSource = dt
+    '    pacientesDataGridView2.DataSource = dt
 
-    '    pacientesDataGridView.Columns.Add(btnVerMas)
-    '    AddHandler pacientesDataGridView.CellContentClick, AddressOf pacientesDataGridView_CellContentClick
+    '    pacientesDataGridView2.Columns.Add(btnVerMas)
+    '    AddHandler pacientesDataGridView2.CellContentClick, AddressOf pacientesDataGridView2_CellContentClick
     'End Sub
 
+    Private Sub ReadCSV()
+        'Boton Ver Mas
+        Dim btnVerMas As New DataGridViewButtonColumn
+        btnVerMas.HeaderText = ""
+        btnVerMas.Text = "Ver Más"
+        btnVerMas.Name = "btnVerMas"
+        btnVerMas.UseColumnTextForButtonValue = True
 
+        pacientesDataGridView2.Columns.Add(btnVerMas)
+        AddHandler pacientesDataGridView2.CellContentClick, AddressOf pacientesDataGridView2_CellContentClick
 
+        'Leer CSV
+        pacientesDataGridView2.Rows.Clear()
 
+        Dim FilaSexo As Integer = 5
+        Dim FilaCivil As Integer = 6
+        Dim FilaFecha As Integer = 4
+
+        Dim parentPath As String = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(My.Application.Info.DirectoryPath)))
+        Dim folderPath As String = String.Concat(parentPath, "\Database\")
+        Dim fName As String = String.Concat(folderPath, "pacientes.csv")
+        Dim enc As System.Text.Encoding = System.Text.Encoding.Default
+
+        Try
+            For I = 1 To IO.File.ReadLines(fName).Count - 1
+                Dim Fila As String() = IO.File.ReadLines(fName, enc)(I).Split(",")
+
+                ' Convertir el valor de "Sexo" a su representación textual
+                Select Case Fila(FilaSexo)
+                    Case "1"
+                        Fila(FilaSexo) = "Mujer"
+                    Case "2"
+                        Fila(FilaSexo) = "Hombre"
+                    Case "3"
+                        Fila(FilaSexo) = "Otro"
+                End Select
+
+                ' Convertir el valor de "estadoCivil" a su representación textual
+                Select Case Fila(FilaCivil)
+                    Case "1"
+                        Fila(FilaCivil) = "Soltero"
+                    Case "2"
+                        Fila(FilaCivil) = "Casado"
+                    Case "3"
+                        Fila(FilaCivil) = "Divorciado"
+                    Case "4"
+                        Fila(FilaCivil) = "Unión Libre"
+                    Case "5"
+                        Fila(FilaCivil) = "Otro"
+                    Case "6"
+                        Fila(FilaCivil) = "Viudo"
+                End Select
+
+                ' Convertir la fecha de dd/mm/yyyy a dd-mmm-yyyy (con el mes en texto)
+                Dim fechaOriginal As String = Fila(FilaFecha)
+                Dim fechaConvertida As DateTime = DateTime.ParseExact(fechaOriginal, "dd/MM/yyyy", Nothing)
+                Fila(FilaFecha) = fechaConvertida.ToString("dd/MMM/yyyy")
+
+                pacientesDataGridView2.Rows.Add(Fila)
+            Next
+        Catch ex As Exception
+            MsgBox("Ha ocurrido un error al abrir el archivo.")
+        End Try
+
+    End Sub
 End Class
